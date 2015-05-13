@@ -14,4 +14,11 @@ public class BinaryResultTest {
         assertTrue(BinarySearch.search(key, seq).isFound());
     }
 
+	 @Test
+	    public void oneElementOnInputExpectedFalse() {
+	        int key = 7;
+	        int seq[] = {2};
+
+	        assertFalse(BinarySearch.search(key, seq).isFound());
+	 }
 }
