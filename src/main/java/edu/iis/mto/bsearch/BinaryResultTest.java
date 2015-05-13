@@ -1,7 +1,7 @@
 package edu.iis.mto.bsearch;
 
 import static org.junit.Assert.*;
-
+import static org.hamcrest.CoreMatchers.*;
 import org.junit.Test;
 
 public class BinaryResultTest {
@@ -21,4 +21,14 @@ public class BinaryResultTest {
 
 	        assertFalse(BinarySearch.search(key, seq).isFound());
 	 }
+	 @Test
+	    public void moreElementsOnInputExpectedFoundAsFirstElement() {
+	        int key = 2;
+	        int seq[] = {2, 3, 5, 7, 11, 13};
+	        int expectedOnPosition = 1;
+	        
+	        assertTrue(BinarySearch.search(key, seq).isFound());
+	        assertThat(expectedOnPosition, is(BinarySearch.search(key, seq).getPosition()));
+	    }
+
 }
