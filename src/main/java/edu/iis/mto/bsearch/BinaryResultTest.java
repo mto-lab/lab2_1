@@ -39,4 +39,13 @@ public class BinaryResultTest {
 		 assertTrue(BinarySearch.search(key, seq).isFound());
 		 assertThat(expectedOnPosition, is(BinarySearch.search(key, seq).getPosition()));
 	 }
+	 @Test
+	 public void moreElementsOnInputExpectedFoundAsMiddleElement(){
+		 int key = 7;
+		 int seq[] = {2, 3, 5, 7, 11, 13, 17};
+		 int expectedOnPosition = 4;
+		 
+		 assertTrue(BinarySearch.search(key, seq).isFound());
+		 assertThat(expectedOnPosition, is(BinarySearch.search(key, seq).getPosition()));
+	 }
 }
