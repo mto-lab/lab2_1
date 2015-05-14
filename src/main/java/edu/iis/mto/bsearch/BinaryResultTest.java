@@ -2,6 +2,7 @@ package edu.iis.mto.bsearch;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
+
 import org.junit.Test;
 
 public class BinaryResultTest {
@@ -57,4 +58,11 @@ public class BinaryResultTest {
 		 assertFalse(BinarySearch.search(key, seq).isFound());
 		 assertThat(expectedOnPosition, is(BinarySearch.search(key, seq).getPosition()));
 	 }
+	 @Test 
+	    public void zeroElementOnInputExpectedIllegalArgumentException(){
+	        int key = 9;
+	        int seq[]={};
+	        
+	        BinarySearch.search(key, seq);
+	    }
 }
