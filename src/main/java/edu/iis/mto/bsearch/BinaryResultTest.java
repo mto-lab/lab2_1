@@ -3,6 +3,7 @@ package edu.iis.mto.bsearch;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 
+
 import org.junit.Test;
 
 public class BinaryResultTest {
@@ -64,5 +65,14 @@ public class BinaryResultTest {
 	        int seq[]={};
 	        
 	        BinarySearch.search(key, seq);
+	    }
+	 @Test
+	    public void identicalElementsExpectedFoundOnMiddleElements() {
+	        int key = 3;
+	        int seq[] = {3, 3, 3, 3, 3, 3, 3, 3};
+	        
+	        SearchResult result = BinarySearch.search(key, seq);
+	        assertTrue(result.isFound());
+	        assertThat(4, is(result.getPosition()));
 	    }
 }
