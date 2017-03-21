@@ -21,6 +21,13 @@ public class BinarySearch {
 	 *         znaleziony -1)
 	 */
 	public static SearchResult search(int key, int[] seq) {
+	    Boolean flag = true;
+	    if(seq.length == 0) {
+	        throw new IllegalArgumentException();
+	    }
+	    
+	    
+	    
 		int start = 0;
 		int end = seq.length - 1;
 		int center;
