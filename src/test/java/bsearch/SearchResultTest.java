@@ -33,4 +33,15 @@ public class SearchResultTest {
         assertThat(searchResult.isFound() == false && searchResult.getPosition() == positionInSequence,
                 is(expectResult));
     }
+
+   @Test
+    public void isFirstInSequence() {
+        final int key = 1;
+        final int[] seq = {1, 2, 3, 4, 5};
+        final int positionInSequence = 1;
+        final boolean expectResult = true;
+
+        SearchResult searchResult = BinarySearch.search(key, seq);
+        assertThat(searchResult.isFound() && searchResult.getPosition() == positionInSequence, is(expectResult));
+    }
 }
