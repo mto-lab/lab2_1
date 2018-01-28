@@ -21,4 +21,16 @@ public class SearchResultTest {
         SearchResult searchResult = BinarySearch.search(key, seq);
         assertThat(searchResult.isFound() && searchResult.getPosition() == positionInSequence, is(expectResult));
     }
+
+   @Test
+    public void isNotInSequenceOfSizeOne() {
+        final int key = 2;
+        final int[] seq = {3};
+        final int positionInSequence = NOT_FOUND;
+        final boolean expectResult = true;
+
+        SearchResult searchResult = BinarySearch.search(key, seq);
+        assertThat(searchResult.isFound() == false && searchResult.getPosition() == positionInSequence,
+                is(expectResult));
+    }
 }
