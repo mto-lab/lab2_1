@@ -66,4 +66,17 @@ public class SearchResultTest {
         SearchResult searchResult = BinarySearch.search(key, seq);
         assertThat(searchResult.isFound() && searchResult.getPosition() == positionInSequence, is(expectResult));
     }
+
+    @Test
+    public void isNotInSequence() {
+        final int key = 6;
+        final int[] seq = {1, 2, 3, 4, 5};
+        final int positionInSequence = NOT_FOUND;
+        final boolean expectResult = true;
+
+        SearchResult searchResult = BinarySearch.search(key, seq);
+        assertThat(searchResult.isFound() == false && searchResult.getPosition() == positionInSequence,
+                is(expectResult));
+    }
+
 }
