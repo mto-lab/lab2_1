@@ -44,4 +44,15 @@ public class SearchResultTest {
         SearchResult searchResult = BinarySearch.search(key, seq);
         assertThat(searchResult.isFound() && searchResult.getPosition() == positionInSequence, is(expectResult));
     }
+
+    @Test
+    public void isLastInSequence() {
+        final int key = 5;
+        final int[] seq = {1, 2, 3, 4, 5};
+        final int positionInSequence = 5;
+        final boolean expectResult = true;
+
+        SearchResult searchResult = BinarySearch.search(key, seq);
+        assertThat(searchResult.isFound() && searchResult.getPosition() == positionInSequence, is(expectResult));
+    }
 }
