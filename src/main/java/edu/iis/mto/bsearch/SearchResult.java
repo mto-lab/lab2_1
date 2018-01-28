@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package edu.iis.mto.bsearch;
 
@@ -34,7 +34,6 @@ public class SearchResult {
 	@Override
 	public String toString() {
 
-		return isFound() ? "( elem at position " + position + ")"
-				: "elem not found";
+		return isFound() ? "( elem at position " + position + ")" : "elem not found";
 	}
 }
