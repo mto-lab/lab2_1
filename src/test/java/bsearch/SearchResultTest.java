@@ -79,4 +79,13 @@ public class SearchResultTest {
                 is(expectResult));
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void sequenceIsEmpty() throws IllegalArgumentException {
+        final int key = 6;
+        final int[] seq = {};
+
+        SearchResult searchResult = BinarySearch.search(key, seq);
+
+    }
+
 }
